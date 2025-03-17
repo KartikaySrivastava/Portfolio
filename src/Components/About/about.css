@@ -1,0 +1,110 @@
+
+#about {
+    min-height: calc(100vh - 9rem); /* Allows flexibility */
+    overflow: hidden;
+    width: 100vw;
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5rem auto 0 auto; /* Added margin on top */
+    margin-top: 0; /* Ensures no gap between sections */
+}
+
+/* Adjust text sizes dynamically */
+.aboutTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    color: yellow;
+    padding-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.aboutDescription {
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 60rem;
+    padding: 0 3rem;
+}
+
+/* Ensure bars are positioned correctly */
+.aboutBars {
+    margin: 1.5rem;
+    width: 100%;
+    max-width: 80%;
+    text-align: left;
+}
+
+.aboutBar {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.5rem;
+    background-color: #202020;
+}
+
+.aboutImg {
+    object-fit: cover;
+    height: 4rem;
+    width: 5rem;
+    margin-right: 2rem;
+}
+
+/* Ensure text alignment */
+.aboutText {
+    font-size: 0.9rem;
+    font-weight: 200;
+    text-align: start;
+}
+
+h2 {
+    color: yellow;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 765px) {
+    .aboutText > p {
+        font-size: 3vw;
+        transition: ease-in-out 0.5s;
+    }
+
+    .aboutTitle{
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+    .aboutText > p {
+        font-size: 13px;
+        transition: ease-in-out 0.5s;
+        text-align: center;
+    }
+
+    .aboutText > h2 {
+        text-align: center;
+    }
+
+    .aboutImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .skillBatText > h2 {
+        font-size: 5vw;
+    }
+
+    /* Ensure bars stack properly */
+    .aboutBar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about{
+        margin-top: -130px;
+    }
+}

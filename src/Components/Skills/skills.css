@@ -1,0 +1,90 @@
+
+#skills {
+    overflow: hidden;
+    min-height: calc(100vh - 4rem);
+    width: 90vw;
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.skillsTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    color: yellow;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Skills Grid */
+.skillsBar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Skill Item */
+.skillsName {
+    background-color: #202020;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skillsName:hover {
+    transform: scale(1.1);
+}
+
+.skillsName > h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+/* Skill Images */
+.skillsImg {
+    width: auto;
+    height: 6rem;
+}
+
+/* Tablet Screens: 3 columns */
+@media screen and (max-width: 950px) {
+    .skillsBar {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skillsImg {
+        height: 5rem;
+        object-fit: cover;
+    }
+}
+
+/* Mobile Screens: 2 columns */
+@media screen and (max-width: 700px) {
+    .skillsBar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skillsImg {
+        height: 4rem;
+        object-fit: cover;
+    }
+
+    .skillsName:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .skillsTitle {
+        font-size: 2rem;
+    }
+}
